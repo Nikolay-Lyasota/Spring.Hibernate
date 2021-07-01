@@ -7,10 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Optional;
-
 @Service
 public class CarServiceImpl implements CarService {
+
     @Autowired
     private CarDao carDao;
 
@@ -22,7 +21,7 @@ public class CarServiceImpl implements CarService {
 
     @Transactional
     @Override
-    public Optional<User> getUserByCarSeries(String model, int series) {
-        return carDao.getUserByCarService(model,series);
+    public User getUserByCarSeries(String model, int series) {
+        return carDao.getUserByCarService(model, series);
     }
 }

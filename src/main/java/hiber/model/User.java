@@ -9,7 +9,7 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(unique = true)
-    private Car  car;
+    private Car car;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
